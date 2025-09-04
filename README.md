@@ -51,7 +51,6 @@ Solutions are optimized whenever possible, but there may be multiple valid appro
 
 ## ⚠️ Disclaimer
 
-All problem statements belong to **LeetCode**.  
-This repository only contains my own **solutions** for educational purposes.  
-You are free to use and modify the code under the terms of the MIT License.
+All problem statements belong to LeetCode.
+This repository only contains my own solutions for learning and educational purposes.
 

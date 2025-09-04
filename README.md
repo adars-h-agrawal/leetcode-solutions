@@ -7,23 +7,22 @@ The goal is to improve problem-solving skills, master **Data Structures & Algori
 
 ## 📂 Repository Structure
 leetcode-solutions/  
-│
-├── 1-two-sum.cpp  
-├── 2-add-two-numbers.cpp  
-├── 3-longest-substring-without-repeating-characters.cpp  
-├── ...  
-├── 100-same-tree.cpp  
-├── ...  
-│  
-├── LICENSE  
-└── README.md  
+|  
+|── 1-two-sum.cpp  
+|── 2-add-two-numbers.cpp  
+|── 3-longest-substring-without-repeating-characters.cpp  
+|── ...  
+|── 100-same-tree.cpp  
+|── ...  
+|  
+|── LICENSE  
+|── README.md  
 
 ---
 
 ## 🏆 Badges
 
-![LeetCode](https://img.shields.io/badge/dynamic/json?style=flat-square&label=Problems%20Solved&query=solved&url=https%3A%2F%2Fleetcode-stats-api.herokuapp.com%2Fadarsh_a_grawal&color=brightgreen)
-![Language](https://img.shields.io/badge/language-C++-blue)
+![LeetCode Stats](https://readmecodegen.vercel.app/api?username=adarsh_a_grawal&theme=light&font=source_code_pro)
 
 ---
 

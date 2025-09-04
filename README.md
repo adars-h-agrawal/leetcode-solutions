@@ -20,7 +20,7 @@ leetcode-solutions/
 
 ---
 
-## 🏆 Badges
+## 🏆 Stats
 
 ![LeetCode Stats](https://readmecodegen.vercel.app/api/leetcode-stats/adarsh_a_grawal?theme=dark)
 

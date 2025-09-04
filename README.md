@@ -44,13 +44,13 @@ leetcode-solutions/
 ---
 
 ## ⚡ Note
-This repository is for **practice & learning**.  
+This repository is for **practice & learning**. 
 Solutions are optimized whenever possible, but there may be multiple valid approaches.  
 
 ---
 
 ## ⚠️ Disclaimer
 
-All problem statements belong to LeetCode.
+All problem statements belong to LeetCode.  
 This repository only contains my own solutions for learning and educational purposes.
 

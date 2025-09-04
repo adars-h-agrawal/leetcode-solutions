@@ -22,7 +22,7 @@ leetcode-solutions/
 
 ## 🏆 Badges
 
-![LeetCode Stats](https://readmecodegen.vercel.app/api?username=adarsh_a_grawal&theme=light&font=source_code_pro)
+![LeetCode Stats](https://readmecodegen.vercel.app/api/leetcode-stats/adarsh_a_grawal?theme=dark)
 
 ---
 

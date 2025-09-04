@@ -6,7 +6,7 @@ The goal is to improve problem-solving skills, master **Data Structures & Algori
 ---
 
 ## 📂 Repository Structure
-leetcode-solutions/
+leetcode-solutions/  
 │
 ├── 1-two-sum.cpp  
 ├── 2-add-two-numbers.cpp  

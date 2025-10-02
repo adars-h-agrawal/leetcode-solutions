@@ -7,13 +7,13 @@ The goal is to improve problem-solving skills, master **Data Structures & Algori
 
 ## 📂 Repository Structure
 leetcode-solutions/  
-|  
-|── 1-two-sum.cpp  
-|── 2-add-two-numbers.cpp  
-|── 3-longest-substring-without-repeating-characters.cpp  
-|── ...  
-|── 100-same-tree.cpp  
-|── ...  
+|    |── cpp_solutions/
+|    |── 1-two-sum.cpp  
+|    |── 2-add-two-numbers.cpp  
+|    |── 3-longest-substring-without-repeating-characters.cpp  
+|    |── ...  
+|    |── 100-same-tree.cpp  
+|    |── ...  
 |  
 |── LICENSE  
 |── README.md  

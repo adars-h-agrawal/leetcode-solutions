@@ -5,32 +5,38 @@ public:
         queue<pair<int, int>> q;
         int fresh = 0;
 
-        // initial rotten added to q & counted fresh
+        // initial rotten added & fresh counted
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (grid[i][j] == 1) fresh++;
-                else if (grid[i][j] == 2) q.push({i, j});
+                if (grid[i][j] == 2) q.push({i, j});
+                else if (grid[i][j] == 1) fresh++;
             }
         }
-        if (fresh == 0) return 0; // no fresh oranges
+        if (fresh == 0) return 0;   // no fresh orange
 
-        int minutes = -1; // -1 to handle last orange check offset
+        int minutes = 0;
         vector<vector<int>> dirs = {{0, 1}, {0, -1}, {-1, 0}, {1, 0}};
 
         while (!q.empty()) {
-            int sz = q.size();
-            while (sz--) {
-                auto [r, c] = q.front(); q.pop();
+            int len = q.size();
+            bool rotted = false;
+
+            while (len--) {
+                auto[r, c] = q.front(); q.pop();
+
                 for (auto& d : dirs) {
                     int nr = r + d[0], nc = c + d[1];
-                    if (nr >= 0 && nc >= 0 && nr < m && nc < n && grid[nr][nc] == 1) {
-                        grid[nr][nc] = 2;
-                        q.push({nr, nc});
-                        fresh--;
-                    }
+
+                    if (nr >= 0 && nc >= 0 && nr < m && nc < n && 
+                        grid[nr][nc] == 1) {
+                            grid[nr][nc] = 2;
+                            q.push({nr, nc});
+                            rotted = true;
+                            fresh--;
+                        }
                 }
             }
-            minutes++;
+            if (rotted) minutes++;
         }
         return fresh == 0 ? minutes : -1;
     }

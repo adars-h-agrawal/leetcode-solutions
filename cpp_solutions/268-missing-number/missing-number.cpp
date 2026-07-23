@@ -1,14 +1,19 @@
 class Solution {
 public:
     int missingNumber(vector<int>& nums) {
+        map<int, int> frq;
         int n = nums.size();
-        int ans = 0;
-        for (int i = 1; i <= n; i++) {
-            ans += i;
+        for (int i = 0; i <= n; i++) {
+            frq[i] = 0;
         }
-        for (int i = 0; i < n; i++) {
-            ans -= nums[i];
+
+        for (int n : nums) {
+            frq[n]++;
         }
-        return ans;
+
+        for (auto [a,b] : frq) {
+            if (b == 0) return a;
+        }
+        return 0;
     }
 };

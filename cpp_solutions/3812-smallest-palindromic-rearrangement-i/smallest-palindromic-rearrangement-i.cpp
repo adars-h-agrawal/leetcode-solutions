@@ -12,7 +12,6 @@ public:
         for (auto &[ch, count] : frq) {
             if (count % 2 == 1)
                 mid = ch;
-
             left += string(count / 2, ch);
         }
 

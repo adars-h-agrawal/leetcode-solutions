@@ -12,11 +12,18 @@ public:
             sign = (s[i++] == '+') ? 1 : -1;
 
         // convert digits to numbers
-        while (i < n && isdigit(s[i])) {
-            ans = ans * 10 + sign * (s[i++] - '0');
-            if (ans >= INT_MAX) return INT_MAX;
-            if (ans <= INT_MIN) return INT_MIN;
+        if (sign == 1) {
+            while (i < n && isdigit(s[i])) {
+                ans = ans * 10 + (s[i++] - '0');
+                if (ans >= INT_MAX) return INT_MAX;
+            }
+            return ans;
+        } else {
+            while (i < n && isdigit(s[i])) {
+                ans = ans * 10 - (s[i++] - '0');
+                if (ans <= INT_MIN) return INT_MIN;
+            }
+            return ans;
         }
-        return ans;
     }
 };

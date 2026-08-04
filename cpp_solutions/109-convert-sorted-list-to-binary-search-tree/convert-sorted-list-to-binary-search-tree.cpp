@@ -21,27 +21,35 @@
  */
 class Solution {
 public:
-    TreeNode* sortedListToBST(ListNode* head) {
-        if (!head) return nullptr;
-        if (!head->next) return new TreeNode(head->val);
+    ListNode* curr;
 
-        ListNode* slow = head;
-        ListNode* fast = head;
-        ListNode* prev = nullptr;
-
-        while (fast && fast->next) {
-            prev = slow;
-            slow = slow->next;
-            fast = fast->next->next;
+    int getSize(ListNode* head) {
+        int cnt = 0;
+        while (head) {
+            cnt++;
+            head = head->next;
         }
+        return cnt;
+    }
 
-        prev->next = nullptr;
+    TreeNode* build(int left, int right) {
+        if (left > right) return nullptr;
 
-        TreeNode* root = new TreeNode(slow->val);
+        int mid = left + (right - left) / 2;
+        TreeNode* leftTree = build(left, mid - 1);
 
-        root->left = sortedListToBST(head);
-        root->right = sortedListToBST(slow->next);
+        TreeNode* root = new TreeNode(curr->val);
+        curr = curr->next;
+
+        root->left = leftTree;
+        root->right = build(mid + 1, right);
 
         return root;
+    }
+
+    TreeNode* sortedListToBST(ListNode* head) {
+        curr = head;
+        int n = getSize(head);
+        return build(0, n - 1);
     }
 };
